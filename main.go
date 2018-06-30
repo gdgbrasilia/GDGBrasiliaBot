@@ -4,11 +4,11 @@ import (
 	"log"
 
 	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/comandos"
+	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/contato"
+	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/github"
+	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/meetups"
+	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/telegram"
 	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/vagas"
-	"github.com/rafaelvicio/bot-telegram-go/comandos/contato"
-	"github.com/rafaelvicio/bot-telegram-go/comandos/github"
-	"github.com/rafaelvicio/bot-telegram-go/comandos/meetups"
-	"github.com/rafaelvicio/bot-telegram-go/comandos/telegram"
 	"gopkg.in/telegram-bot-api.v4"
 )
 
@@ -37,8 +37,6 @@ func main() {
 		if update.Message.IsCommand() {
 			msg := tgbotapi.NewMessage(update.Message.Chat.ID, "")
 			switch update.Message.Command() {
-			case "help":
-				msg.Text = "I help you"
 			case "meetups":
 				msg.Text = meetups.GetMeetups()
 			case "github":
@@ -51,7 +49,10 @@ func main() {
 				msg.Text = vagas.GetVagas()
 			case "comandos":
 				msg.Text = comandos.GetComandos()
+			default:
+				msg.Text = "Desculpe, não conheço esse comando"
 			}
+
 			bot.Send(msg)
 		}
 
