@@ -1,7 +1,7 @@
 package comandos
 
 func GetComandos() string {
-	comandos := "Alguns dos comandos do GDGBrasilía Bot: \n"
+	comandos := "Alguns dos comandos que eu entendo: \n \n"
 	comandos = comandos + "/metuups - Lista dos proximos meetups do GDG Brasília \n"
 	comandos = comandos + "/vagas - Lista de vagas cadastrados no GDG Brasília \n"
 	comandos = comandos + "/telegram - Link do Grupo do Telegram do GDG Brasília \n"
