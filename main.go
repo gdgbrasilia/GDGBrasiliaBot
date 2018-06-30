@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 
+	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/comandos"
 	"github.com/rafaelvicio/bot-telegram-go/comandos/contato"
 	"github.com/rafaelvicio/bot-telegram-go/comandos/github"
 	"github.com/rafaelvicio/bot-telegram-go/comandos/meetups"
@@ -45,6 +46,8 @@ func main() {
 				msg.Text = contato.GetContato()
 			case "telegram":
 				msg.Text = telegram.GetTelegram()
+			case "comandos":
+				msg.Text = comandos.GetComandos()
 			}
 			bot.Send(msg)
 		}
