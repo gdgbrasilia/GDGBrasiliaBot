@@ -7,6 +7,7 @@ func GetComandos() string {
 	comandos = comandos + "/telegram - Link do Grupo do Telegram do GDG Brasília \n"
 	comandos = comandos + "/github - Link da Organização GDG Brasília no GitHub \n"
 	comandos = comandos + "/projeto - Link do Projeto do GDGBrasiliaBot no GitHub \n"
+	comandos = comandos + "/midias - Links das Mídias Sociais do GDGBrasiliaBot \n"
 	comandos = comandos + "/contato - Email de Contato do GDG Brasília \n"
 	return comandos
 }
