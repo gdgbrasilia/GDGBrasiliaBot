@@ -8,6 +8,7 @@ import (
 	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/github"
 	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/meetups"
 	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/midias"
+	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/projeto"
 	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/telegram"
 	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/vagas"
 	"gopkg.in/telegram-bot-api.v4"
@@ -52,6 +53,8 @@ func main() {
 				msg.Text = comandos.GetComandos()
 			case "midias":
 				msg.Text = midias.GetMidias()
+			case "projeto":
+				msg.Text = projeto.GetProjeto()
 			default:
 				msg.Text = "Desculpe, não conheço esse comando"
 			}
