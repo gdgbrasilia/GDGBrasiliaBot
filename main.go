@@ -3,10 +3,14 @@ package main
 import (
 	"log"
 
-	"github.com/rafaelvicio/bot-telegram-go/comandos/contato"
-	"github.com/rafaelvicio/bot-telegram-go/comandos/github"
-	"github.com/rafaelvicio/bot-telegram-go/comandos/meetups"
-	"github.com/rafaelvicio/bot-telegram-go/comandos/telegram"
+	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/comandos"
+	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/contato"
+	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/github"
+	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/meetups"
+	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/midias"
+	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/projeto"
+	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/telegram"
+	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/vagas"
 	"gopkg.in/telegram-bot-api.v4"
 )
 
@@ -35,8 +39,6 @@ func main() {
 		if update.Message.IsCommand() {
 			msg := tgbotapi.NewMessage(update.Message.Chat.ID, "")
 			switch update.Message.Command() {
-			case "help":
-				msg.Text = "I help you"
 			case "meetups":
 				msg.Text = meetups.GetMeetups()
 			case "github":
@@ -45,7 +47,18 @@ func main() {
 				msg.Text = contato.GetContato()
 			case "telegram":
 				msg.Text = telegram.GetTelegram()
+			case "vagas":
+				msg.Text = vagas.GetVagas()
+			case "comandos":
+				msg.Text = comandos.GetComandos()
+			case "midias":
+				msg.Text = midias.GetMidias()
+			case "projeto":
+				msg.Text = projeto.GetProjeto()
+			default:
+				msg.Text = "Desculpe, não conheço esse comando"
 			}
+
 			bot.Send(msg)
 		}
 
