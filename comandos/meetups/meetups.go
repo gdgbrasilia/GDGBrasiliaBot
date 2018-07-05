@@ -5,6 +5,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"time"
 )
 
 func GetMeetups() string {
@@ -34,9 +35,14 @@ func GetMeetups() string {
 	var texto string
 
 	for indice := range meetups {
+
 		meetupp := meetups[indice]
+
+		t, _ := time.Parse("2006-02-01", meetupp.LocalDate)
+		data := t.Format("02/01/2006")
+
 		texto = texto + "Nome: " + meetupp.Name + "\n"
-		texto = texto + "Data: " + meetupp.LocalDate + " ás " + meetupp.LocalTime + " Horas" + "\n"
+		texto = texto + "Data: " + data + " ás " + meetupp.LocalTime + " Horas" + "\n"
 		texto = texto + "Local: " + meetupp.Venue.Address + " - " + meetupp.Venue.City + "\n"
 		texto = texto + "Link: " + meetupp.Link
 		texto = texto + "\n \n"
