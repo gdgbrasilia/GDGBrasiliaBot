@@ -22,13 +22,13 @@ func GetLivro() string {
 		log.Fatal(err)
 	}
 
-	var texto string
 	livro := doc.Find(".dotd-title").Text()
-	tempo := doc.Find(".packt-js-countdown").Text()
+	livro = strings.TrimSpace(livro)
+
+	var texto string
 
 	texto = texto + "Confira o livro gratuito de hoje: \n"
-	texto = texto + "Nome: " + strings.TrimSpace(livro) + " \n"
-	texto = texto + "Proximo livro em " + strings.TrimSpace(tempo) + " \n \n"
+	texto = texto + livro + " \n \n"
 	texto = texto + "Resgate seu livro em: https://www.packtpub.com/packt/offers/free-learning"
 
 	return texto
