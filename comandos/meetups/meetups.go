@@ -36,8 +36,8 @@ func GetMeetups() string {
 	for indice := range meetups {
 		meetupp := meetups[indice]
 		texto = texto + "Nome: " + meetupp.Name + "\n"
-		texto = texto + "Data: " + meetupp.LocalTime + " ás " + meetupp.LocalTime + "Horas" + "\n"
-		texto = texto + "Local: " + meetupp.Venue.Name + " - " + meetupp.Venue.Address + "\n"
+		texto = texto + "Data: " + meetupp.LocalDate + " ás " + meetupp.LocalTime + " Horas" + "\n"
+		texto = texto + "Local: " + meetupp.Venue.Address + " - " + meetupp.Venue.City + "\n"
 		texto = texto + "Link: " + meetupp.Link
 		texto = texto + "\n \n"
 	}
