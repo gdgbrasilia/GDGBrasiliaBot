@@ -9,6 +9,12 @@
 			"revisionTime": "2018-06-07T15:06:10Z"
 		},
 		{
+			"checksumSHA1": "t8jzPFIv4DNACv+cuZoigNmjPLQ=",
+			"path": "github.com/technoweenie/multipartstreamer",
+			"revision": "a90a01d73ae432e2611d178c18367fbaa13e0154",
+			"revisionTime": "2013-10-20T00:18:33Z"
+		},
+		{
 			"checksumSHA1": "6WbIuKGVDXQWwDjjEYx4fzLfQO8=",
 			"path": "golang.org/x/net/html",
 			"revision": "4cb1c02c05b0e749b0365f61ae859a8e0cfceed9",
