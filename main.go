@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"os"
 
 	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/comandos"
 	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/contato"
@@ -17,7 +18,12 @@ import (
 )
 
 func main() {
-	bot, err := tgbotapi.NewBotAPI("551297102:AAFPVW8XFdmwtlM0-ez4h3ykEXBbWnJ0DgM")
+	port := os.Getenv("BotToken")
+	if port == "" {
+		log.Panic("Token invalido")
+	}
+
+	bot, err := tgbotapi.NewBotAPI(port)
 	if err != nil {
 		log.Panic(err)
 	}
