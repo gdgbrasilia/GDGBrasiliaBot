@@ -1,0 +1,19 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "l1dgFJfzGLG/2AEPyt6ADsnVLPQ=",
+			"path": "github.com/PuerkitoBio/goquery",
+			"revision": "dc2ec5c7ca4d9aae063b79b9f581dd3ea6afd2b2",
+			"revisionTime": "2018-06-07T15:06:10Z"
+		},
+		{
+			"checksumSHA1": "3tsJ1cWUVwgnXtMP1PTVs70Esfs=",
+			"path": "gopkg.in/telegram-bot-api.v4",
+			"revision": "0e0af0c480ea98e982d5f4d45fb39577c6ab1e3e",
+			"revisionTime": "2018-03-28T13:10:29Z"
+		}
+	],
+	"rootPath": "github.com/rafaelvicio/GDGBrasiliaBot"
+}
