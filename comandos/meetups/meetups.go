@@ -38,7 +38,7 @@ func GetMeetups() string {
 
 		meetupp := meetups[indice]
 
-		t, _ := time.Parse("2006-02-01", meetupp.LocalDate)
+		t, _ := time.Parse("2006-01-02", meetupp.LocalDate)
 		data := t.Format("02/01/2006")
 
 		texto = texto + "Nome: " + meetupp.Name + "\n"

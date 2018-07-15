@@ -18,12 +18,12 @@ import (
 )
 
 func main() {
-	port := os.Getenv("BotToken")
-	if port == "" {
+	token := os.Getenv("BotToken")
+	if token == "" {
 		log.Panic("Token invalido")
 	}
 
-	bot, err := tgbotapi.NewBotAPI(port)
+	bot, err := tgbotapi.NewBotAPI(token)
 	if err != nil {
 		log.Panic(err)
 	}
