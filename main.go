@@ -10,10 +10,10 @@ import (
 	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/livro"
 	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/meetups"
 	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/midias"
+	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/palestrar"
 	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/projeto"
 	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/start"
 	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/telegram"
-	"github.com/rafaelvicio/GDGBrasiliaBot/comandos/vagas"
 	"gopkg.in/telegram-bot-api.v4"
 )
 
@@ -55,8 +55,8 @@ func main() {
 				msg.Text = contato.GetContato()
 			case "telegram":
 				msg.Text = telegram.GetTelegram()
-			case "vagas":
-				msg.Text = vagas.GetVagas()
+			case "palestrar":
+				msg.Text = palestrar.GetPalestrar()
 			case "comandos":
 				msg.Text = comandos.GetComandos()
 			case "midias":
