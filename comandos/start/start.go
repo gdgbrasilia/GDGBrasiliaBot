@@ -1,5 +1,5 @@
 package start
 
-func getStart() string {
-	return "Bem-vindo ao GDG"
+func GetStart(username string) string {
+	return "Olá, " + username + " \n \n Eu sou o GDGBrasíliaBot. Em que posso ajudar? \n Digite /comandos para começar"
 }
